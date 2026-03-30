@@ -1,11 +1,11 @@
-import RangePic1 from "../assets/range1.jpg";
-import RangePic2 from "../assets/range2.jpg";
-import RangePic3 from "../assets/range3.jpg";
+import RangePic1 from "../assets/range4.jpg";
+import RangePic2 from "../assets/range5.jpg";
+import RangePic3 from "../assets/range6.jpg";
 
 export const Range = () => {
   return `
-        <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
-            <p class="text-lg text-gray-800 sm:text-xl dark:text-white text-start max-w-3xl">
+        <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-2">
+            <p class="text-lg text-gray-800 sm:text-xl dark:text-white text-start max-w-3xl py-10">
                 Elevate your lifestyle with a more intelligent, superior wardrobe.</br> Our range is crafted sustainably with longevity in mind.        
             </p>
             <div class="cards flex flex-col sm:flex-row gap-6 justify-center sm:justify-between">
