@@ -1,6 +1,6 @@
 export const InstagramCard = ({ image, link }) => {
   return `
-    <a href="${link}" target="_blank" class="relative aspect-[1/1] w-full overflow-hidden group block">
+    <a href="${link}" target="_blank" class="relative aspect-square w-full overflow-hidden group block">
         
         <img 
           src="${image}" 

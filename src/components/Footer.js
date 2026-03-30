@@ -42,7 +42,7 @@ export const Footer = () => {
                 <p class="mt-3 text-xs text-gray-500 dark:text-neutral-500">
                   By signing up, you agree to our <a class="text-black hover:underline" href="#">Privacy Policy</a> and <a class="text-black hover:underline" href="#">Terms of Service</a>.
                 </p>
-                <button type="submit" class="w-30 py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-black text-white hover:bg-gray-700 transition-colors">
+                <button type="submit" class="w-30 py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm border border-transparent bg-black text-white hover:bg-gray-700 transition-colors">
                   Subscribe
                 </button>
               </div>
