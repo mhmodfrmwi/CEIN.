@@ -8,7 +8,7 @@ export const Hero = () => {
       <div class="absolute inset-0 bg-black/40"></div>
       
       <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 flex flex-col items-start">
-        <h1 class="text-3xl text-white sm:text-xl  text-start drop-shadow-lg">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl text-white text-start drop-shadow-lg leading-tight">
             Elevate Your Style.<br/> Timeless Fashion, Sustainable<br/>
             Choices 
         </h1>

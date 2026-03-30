@@ -2,7 +2,7 @@
 
 export const Product = ({ image, title, price }) => {
   return `
-    <div class="w-full sm:w-[18%] flex flex-col bg-white transition-shadow duration-300 group overflow-hidden dark:bg-neutral-900 dark:border-neutral-800">
+    <div class="w-full sm:w-[48%] md:w-[31%] lg:w-[18%] flex flex-col bg-white transition-shadow duration-300 group overflow-hidden dark:bg-neutral-900 dark:border-neutral-800">
         
         <div class="relative aspect-square w-full overflow-hidden bg-gray-50 dark:bg-neutral-800">
             <img 

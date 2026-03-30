@@ -3,7 +3,7 @@ import RoleModel2 from "../assets/model2.jpg";
 
 export const RoleModels = () => {
   return `
-    <div class="max-w-7xl mx-auto py-16">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div class="relative w-full h-220 overflow-hidden group cursor-pointer shadow-lg">
                 <img src="${RoleModel1}" alt="New Arrivals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">

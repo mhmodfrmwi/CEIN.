@@ -1,6 +1,6 @@
 export const BrandThought = () => {
   return `
-        <div class="bg-gray-100 text-center h-106.25 w-full flex flex-col items-center justify-center mt-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-100 dark:bg-neutral-800 text-center h-106.25 w-full flex flex-col items-center justify-center mt-12 px-4 sm:px-6 lg:px-8">
             <h3 class="text-3xl text-gray-800 sm:text-4xl dark:text-white mb-6">
                 The Art of Fewer, Better Choices
             </h3>
