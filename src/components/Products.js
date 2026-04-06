@@ -3,7 +3,7 @@ import { Product } from "./ProductCard";
 
 export const Products = (products = []) => {
   return `
-    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 relative group">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         <div class="flex items-center justify-between mb-8">
             <h2 class="text-2xl font-bold md:text-3xl text-gray-800 dark:text-white">
                 What to Wear Now
