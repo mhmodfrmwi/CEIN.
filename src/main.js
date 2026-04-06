@@ -13,6 +13,7 @@ import { dummyProducts } from "./data/dummyData";
 import { instagramPosts } from "./data/instagramPosts";
 import { CartOffcanvas } from "./components/CartOffcanvas";
 import { UpdateCartUI } from "./components/cartUI";
+import { initCarousel } from "./events/carouselEvents";
 
 const app = document.querySelector("#app");
 
@@ -34,6 +35,7 @@ function renderApp() {
       window.HSStaticMethods.autoInit();
     }
     UpdateCartUI();
+    initCarousel();
   }, 100);
 }
 
