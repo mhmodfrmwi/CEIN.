@@ -123,19 +123,21 @@ export const Navbar = () => {
                     alt="User Avatar"
                     class="rounded-full w-6 h-6 object-cover dark:invert"
                   />
-                  <p class=" text-black dark:text-white dark:bg-black rounded-full w-5 h-5 flex items-center justify-center">0</p>
+                  <p class="bg-black text-white dark:bg-white dark:text-black rounded-full w-5 h-5 flex items-center justify-center text-xs ml-1 font-medium">0</p>
                 </a
               >
             <a
                 class="flex text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white items-center"
                 href="#"
+                data-hs-overlay="#cart-offcanvas"
+                aria-controls="cart-offcanvas"
                 >
                    <img
                     src="${Bag}"
                     alt="User Avatar"
                     class="rounded-full w-6 h-6 object-cover dark:invert"
                   />
-                  <p class=" text-black dark:text-white dark:bg-black rounded-full w-5 h-5 flex items-center justify-center">0</p>
+                  <p id="cart-badge" class="bg-black text-white dark:bg-white dark:text-black rounded-full w-5 h-5 flex items-center justify-center text-xs ml-1 font-medium">0</p>
                 </a
               >
             <a

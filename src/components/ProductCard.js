@@ -1,6 +1,6 @@
 // components/ProductCard.js
 
-export const Product = ({ image, title, price }) => {
+export const Product = ({ id, image, title, price }) => {
   return `
     <div class="w-full sm:w-[48%] md:w-[31%] lg:w-[18%] flex flex-col bg-white transition-shadow duration-300 group overflow-hidden dark:bg-neutral-900 dark:border-neutral-800">
         
@@ -11,7 +11,7 @@ export const Product = ({ image, title, price }) => {
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             >
             
-            <button class="absolute bottom-3 right-3 bg-white/90 p-2.5 rounded-full text-gray-800 shadow-md hover:bg-black hover:text-white transition-all duration-300 active:scale-95 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-white dark:hover:text-black">
+            <button data-id="${id}" class="add-to-cart-btn absolute bottom-3 right-3 bg-white/90 p-2.5 rounded-full text-gray-800 shadow-md hover:bg-black hover:text-white transition-all duration-300 active:scale-95 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-white dark:hover:text-black">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
