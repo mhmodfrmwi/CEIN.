@@ -2,6 +2,8 @@
 import { Product } from "./ProductCard";
 
 export const Products = (products = []) => {
+  // console.log(products);
+
   return `
     <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         <div class="flex items-center justify-between mb-8">

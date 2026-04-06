@@ -80,55 +80,52 @@ export const Navbar = () => {
               >
               <a
                 class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
+                href="#/new-arrivals"
                 >New Arrivals</a
               >
               <a
-                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
+                class="text-sm text-red-600 dark:text-red-500 hover:text-red-800 dark:hover:text-red-400 focus:outline-hidden font-semibold transition-colors duration-300"
+                href="#/sale"
                 >Sales</a
               >
               <a
-                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
-                >Journel</a
+                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white transition-colors duration-300"
+                href="#/journal"
+                >Journal</a
               >
             </div>
           </div>
           <div class="hidden w-full sm:flex sm:items-center sm:justify-end gap-x-4">
             <a
-                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
+                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white transition-colors duration-300 cursor-pointer"
+                href="#/search"
                 >
                    <img
                     src="${MagnifyingGlass}"
-                    alt="User Avatar"
+                    alt="Search"
                     class="rounded-full w-6 h-6 object-cover dark:invert"
                   />
-                </a
-              >
+                </a>
             <a
-                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
+                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white transition-colors duration-300"
+                href="#/story"
                 >
                    Stories
-                </a
-              >
+                </a>
             <a
-                class="flex text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white items-center"
-                href="#"
+                class="flex text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white items-center transition-colors duration-300 cursor-pointer"
+                href="#/favorites"
                 >
                    <img
                     src="${Heart}"
-                    alt="User Avatar"
+                    alt="Favorites"
                     class="rounded-full w-6 h-6 object-cover dark:invert"
                   />
-                  <p class="bg-black text-white dark:bg-white dark:text-black rounded-full w-5 h-5 flex items-center justify-center text-xs ml-1 font-medium">0</p>
-                </a
-              >
+                  <p id="favorite-badge" class="bg-black text-white dark:bg-white dark:text-black rounded-full w-5 h-5 flex items-center justify-center text-xs ml-1 font-medium">0</p>
+                </a>
             <a
-                class="flex text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white items-center"
-                href="#"
+                class="flex text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white items-center cursor-pointer"
+                href="javascript:void(0)"
                 data-hs-overlay="#cart-offcanvas"
                 aria-controls="cart-offcanvas"
                 >
@@ -138,21 +135,21 @@ export const Navbar = () => {
                     class="rounded-full w-6 h-6 object-cover dark:invert"
                   />
                   <p id="cart-badge" class="bg-black text-white dark:bg-white dark:text-black rounded-full w-5 h-5 flex items-center justify-center text-xs ml-1 font-medium">0</p>
-                </a
-              >
-            <a
-                class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
-                href="#"
-                >
-                   <img
-                    src="${UserCircle}"
-                    alt="User Avatar"
-                    class="rounded-full w-6 h-6 object-cover dark:invert"
-                  />
-                </a
-              >
+                </a>
+            
           </div>
         </nav>
       </header>
   `;
+  // <a
+  //               class="text-sm text-gray-600 dark:text-neutral-400 hover:text-black dark:hover:text-white focus:outline-hidden focus:text-black dark:focus:text-white"
+  //               href="#"
+  //               >
+  //                  <img
+  //                   src="${UserCircle}"
+  //                   alt="User Avatar"
+  //                   class="rounded-full w-6 h-6 object-cover dark:invert"
+  //                 />
+  //               </a
+  //             >
 };
