@@ -1,4 +1,4 @@
-export const addToCart = (product) => {
+export const addToCart = (product, qty = 1) => {
   const cart = getCartItems();
   const productCount =
     cart.find((item) => item.id === product.id)?.quantity || 0;
@@ -6,12 +6,12 @@ export const addToCart = (product) => {
   if (productCount > 0) {
     updatedCart = cart.map((item) => {
       if (item.id === product.id) {
-        return { ...item, quantity: item.quantity + 1 };
+        return { ...item, quantity: item.quantity + qty };
       }
       return item;
     });
   } else {
-    updatedCart = [...cart, { ...product, quantity: 1 }];
+    updatedCart = [...cart, { ...product, quantity: qty }];
   }
   localStorage.setItem("cart", JSON.stringify(updatedCart));
 };

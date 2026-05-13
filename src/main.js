@@ -26,6 +26,11 @@ import { Search } from "./components/Search";
 import { favoriteEventsHandler, UpdateFavoriteUI } from "./events/favoriteEvents";
 import { bindSearchEvents } from "./events/searchEvents";
 import { getFavorites } from "./store/favorites";
+import { bindFilterEvents, initFilters } from "./events/filterEvents";
+import { bindProductDetailEvents } from "./events/productDetailEvents";
+import { Checkout } from "./components/Checkout";
+import { OrderConfirmation } from "./components/OrderConfirmation";
+import { bindCheckoutEvents } from "./events/checkoutEvents";
 
 
 
@@ -57,7 +62,6 @@ function renderApp(products) {
     ${CartOffcanvas()}
   `;
 
-  // Start router
   setupRouter(products);
 
   setTimeout(() => {
@@ -81,11 +85,12 @@ function setupRouter(products) {
       mainContent.innerHTML = ProductDetails(product);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (hash === "#/new-arrivals") {
-      const newProducts = products.slice(0, 16); // Select a batch of 16 for new arrivals
+      const newProducts = products.slice(0, 16); 
       mainContent.innerHTML = NewArrivals(newProducts);
+      initFilters(newProducts);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (hash === "#/sale") {
-      const saleProducts = products.slice(16, 32); // Pick a different subset for sales
+      const saleProducts = products.slice(16, 32); 
       mainContent.innerHTML = Sales(saleProducts);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (hash.startsWith("#/journal/")) {
@@ -105,11 +110,17 @@ function setupRouter(products) {
     } else if (hash === "#/search") {
       mainContent.innerHTML = Search(products);
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // ensure the input auto-focuses elegantly after DOM paints
       setTimeout(() => {
           const searchInput = document.getElementById("global-search-input");
           if (searchInput) searchInput.focus();
       }, 50);
+    } else if (hash === "#/checkout") {
+      mainContent.innerHTML = Checkout();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (hash.startsWith("#/order-confirmation/")) {
+      const orderNumber = hash.split("/")[2] || "000000";
+      mainContent.innerHTML = OrderConfirmation(orderNumber);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       mainContent.innerHTML = `
         ${Hero()}
@@ -119,21 +130,21 @@ function setupRouter(products) {
         ${BrandThought()}
         ${InstagramSection(instagramPosts)}
       `;
-      // Give DOM time to update before attaching exact event handlers to the new nodes
       setTimeout(() => initCarousel(), 0);
     }
     
-    // Sync the UI for heart buttons and badges across all new DOM nodes
     setTimeout(() => UpdateFavoriteUI(), 0);
   };
 
   window.addEventListener("hashchange", renderRoute);
   
-  // Render initial matching route
   renderRoute();
 }
 
 app.addEventListener("click", cartEventsHandler);
 app.addEventListener("click", favoriteEventsHandler);
 bindSearchEvents();
+bindFilterEvents();
+bindProductDetailEvents();
+bindCheckoutEvents();
 initializeApp();

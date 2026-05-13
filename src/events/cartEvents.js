@@ -33,8 +33,12 @@ export const cartEventsHandler = (event) => {
     const product = dummyProducts.find((p) => p.id === productId);
 
     if (product) {
-      addToCart(product);
-      showToast(`${product.title} has been added to your cart!`);
+      // Check if a quantity picker exists on the page (Product Details page)
+      const qtyEl = document.getElementById("pd-qty-value");
+      const qty = qtyEl ? parseInt(qtyEl.textContent) || 1 : 1;
+      addToCart(product, qty);
+      const qtyText = qty > 1 ? ` (x${qty})` : '';
+      showToast(`${product.title}${qtyText} has been added to your cart!`);
     }
     UpdateCartUI();
   }
@@ -64,13 +68,15 @@ export const cartEventsHandler = (event) => {
   if (checkoutBtn) {
     const cartCount = getCartCount();
     if (cartCount === 0) {
-      showToast("Your cart is already empty.");
+      showToast("Your cart is empty.");
       return;
     }
-    clearCart();
-    UpdateCartUI();
-    showToast("Purchase completed successfully! Thank you.");
+    // Close the cart offcanvas and navigate to checkout
     const closeBtn = document.querySelector("#close-cart-btn");
     if (closeBtn) closeBtn.click();
+    setTimeout(() => {
+      window.location.hash = "#/checkout";
+    }, 300);
   }
 };
+

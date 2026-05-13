@@ -1,3 +1,8 @@
 @import "tailwindcss";
 @import "preline/variants.css";
 @source "./node_modules/preline/dist/*.js";
+
+/* Product Detail image gallery transition */
+#pd-main-image {
+  transition: opacity 0.2s ease-in-out;
+}
